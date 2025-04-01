@@ -29,7 +29,7 @@ public class EstudianteController { // Define la clase EstudianteController
     @PostMapping("/estudiantes")
     public ResponseEntity<EstudianteDTO> crearEstudiante(@RequestBody EstudianteDTO estudianteDTO){
         EstudianteDTO nuevoEstudiante = estudianteService.crearEstudiante(estudianteDTO);
-        return ResponseEntity.status(201).body(nuevoEstudiante); // Retorna una respuesta HTTP 201 Created con el nuevo estudiante
+        return ResponseEntity.status(201).body(nuevoEstudiante);
     }
 
     @GetMapping("/estudiantes/{id}")
